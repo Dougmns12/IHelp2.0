@@ -359,6 +359,10 @@ a:hover, a:focus, a:active {
   border-color: #ba9106 !important;
 }
 
+.star{
+  height: 40px;
+}
+
 .btn-dark {
   color: #fff !important;
 }
