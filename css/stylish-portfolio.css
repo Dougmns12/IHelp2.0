@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Stylish Portfolio v5.0.6 (https://startbootstrap.com/template-overviews/stylish-portfolio)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
- */
-
 body,
 html {
   width: 100%;
@@ -359,6 +353,10 @@ a:hover, a:focus, a:active {
   border-color: #ba9106 !important;
 }
 
+.star{
+  height: 40px;
+}
+
 .btn-dark {
   color: #fff !important;
 }
@@ -379,4 +377,16 @@ a:hover, a:focus, a:active {
 
 .text-secondary {
   color: #ecb807 !important;
+}
+
+/*-- ------------------- CADASTRO -----------------*/
+
+.corpo{ 
+  padding: 10%;
+  border: white;
+  background-color: #1D809F;
+}
+.botao{
+  height: 40px;
+  width: 184px;
 }
