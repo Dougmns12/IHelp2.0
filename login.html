@@ -1,24 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  	<link rel="icon" type="imagem/png" href="img/icone.png" />
-	<title>Entrando no IHelp</title>
-  	<!-- Bootstrap Core CSS -->
-  	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  	<meta charset="utf-8">
+    <link rel="icon" type="imagem/png" href="img/icone.png" />
+  	<title>Entrando no IHelp</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 
-  	<!-- Custom Fonts -->
-  	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  	<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-  	<!-- Custom CSS -->
-  	<link href="css/stylish-portfolio.css" rel="stylesheet">
-
+    <!-- fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="cadastrar-js">
+    <div class="container">
+      <div class="content first-content">
+        <div class="first-column">
+          <h2 class="title-bemvindo">Seja Bem-Vindo</h2>
+          <p class="description description-primary">Algum texto que ainda vou pensar</p>
+          <p class="description description-primary">Por favor coloque suas informações pessoais abaixo</p>
+          <button id="entrar" class="btn btn-primary">Entrar</button>
+        </div> <!-- Primeira Coluna -->
+        <div class="second-column">
+          <h2 class="title-second">Criar conta</h2>
+          <div class="social-media">
+            <ul class="list-social-midia">
+              <a href="#">
+                <li class="item-social-midia">
+                  <img src="https://img.icons8.com/material/30/000000/facebook-circled.png">
+                </li>
+              </a>
+              <a href="#">
+                <li class="item-social-midia">
+                    <img src="https://img.icons8.com/material-sharp/30/000000/google-plus.png">
+                </li>
+              </a>
+            </ul>
+          </div><!-- Social Mídeia -->
+          <div class="description description-second">
+            <p>Alguma coisa que ainda vou pensar</p>
+          </div>
+          <form class="form">
+            <label class="label-input" for="">
+              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/user.png">
+              <input type="text" placeholder="Nome">
+            </label>
+            <label class="label-input" for="">
+              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/email.png">
+              <input type="email" placeholder="Email">
+            </label>
+            <label class="label-input">
+              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/forgot-password.png">
+              <input type="password" placeholder="Senha">
+            </label>
+          <button class="btn btn-second">Cadastrar</button>
+          </form>
+        </div> <!-- Segunda Coluna -->
+      </div> <!-- Primeiro Content -->
+    <div class="content second-content">
+        <div class="first-column">
+          <h2 class="title-bemvindo">Olá amigo</h2>
+          <p class="description description-primary">Insira os seus dados pessoais aqui</p>
+          <p class="description description-primary">algum texto que ainda vou pensar</p>
+          <button id="conta" class="btn btn-primary">Criar conta</button>
+        </div> <!-- Primeira Coluna -->
+        <div class="second-column">
+          <h2 class="title title-second">Entrar</h2>
+          <div class="social-media">
+            <ul class="list-social-midia">
+              <a href="#">
+                <li class="item-social-midia">
+                  <img src="https://img.icons8.com/material/30/000000/facebook-circled.png">
+                </li>
+              </a>
+              <a href="#">
+                <li class="item-social-midia">
+                    <img src="https://img.icons8.com/material-sharp/30/000000/google-plus.png">
+                </li>
+              </a>
+            </ul>
+          </div> <!-- Social Mídeia -->
+          <form class="form">          
+            <label class="label-input" for="">
+              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/email.png">
+              <input type="email" placeholder="Email">
+            </label>
+            
+            <label class="label-input">
+              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/forgot-password.png">
+              <input type="password" placeholder="Senha">
+            </label>
+          <a class="password" href="#">esqueceu sua senha?</a>
+          <button class="btn btn-second">Cadastrar</button>
+          </form>
+        </div> <!-- Segunda Coluna --> 
+    </div> <!-- Segundo Content -->
+    </div>
 
+  <!-- INTERATIVIDADE DO LOGIN COM O CADASTRO -->
+  <script src="js/login.js"></script>
 </body>
 </html>
