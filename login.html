@@ -1,101 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<meta charset="utf-8">
-    <link rel="icon" type="imagem/png" href="img/icone.png" />
-  	<title>Entrando no IHelp</title>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+  <meta charset="utf-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" type="text/css" href="css/entrar.css">
 
-    <!-- fontes -->
+  <!-- fontes -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-
 </head>
-<body class="cadastrar-js">
+<body>
     <div class="container">
-      <div class="content first-content">
-        <div class="first-column">
-          <h2 class="title-bemvindo">Seja Bem-Vindo</h2>
-          <p class="description description-primary">Algum texto que ainda vou pensar</p>
-          <p class="description description-primary">Por favor coloque suas informações pessoais abaixo</p>
-          <button id="entrar" class="btn btn-primary">Entrar</button>
-        </div> <!-- Primeira Coluna -->
-        <div class="second-column">
-          <h2 class="title-second">Criar conta</h2>
-          <div class="social-media">
-            <ul class="list-social-midia">
-              <a href="#">
-                <li class="item-social-midia">
-                  <img src="https://img.icons8.com/material/30/000000/facebook-circled.png">
-                </li>
-              </a>
-              <a href="#">
-                <li class="item-social-midia">
-                    <img src="https://img.icons8.com/material-sharp/30/000000/google-plus.png">
-                </li>
-              </a>
-            </ul>
-          </div><!-- Social Mídeia -->
-          <div class="description description-second">
-            <p>Alguma coisa que ainda vou pensar</p>
+      <div class="content second-content">
+          <div class="first-column">
+            <h2 class="title-bemvindo">Olá amigo</h2>
+            <p class="description description-primary">Está perdido e não sabe para onde ir?</p>
+            <p class="description description-primary">Cadastre-se e tire suas dúvidas</p>
+            <a href="cadastrar.html"><button class="btn btn-primary">Criar conta</button></a>
+          </div> <!-- Primeira Coluna -->
+          <div class="second-column">
+            <h2 class="title title-second">Entrar</h2>
+            <!-- FORMULÁRIO -->
+            <form action="login.html" name="login.html" id="formulariodeLogin" method="POST" class="form">          
+              <label class="label-input" for="">
+                <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/email.png">
+                <input  type="email" name="email" value="" placeholder="Email">
+              </label>
+              
+              <label class="label-input">
+                <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/forgot-password.png">
+                <input type="password" name="senha" value="" placeholder="Senha">
+              </label>
+            <a class="password" href="#">esqueceu sua senha?</a>
+            <a href="perguntas.html"><button class="btn btn-second">Entrar</button></a>
+            </form>
           </div>
-          <form class="form">
-            <label class="label-input" for="">
-              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/user.png">
-              <input type="text" placeholder="Nome">
-            </label>
-            <label class="label-input" for="">
-              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/email.png">
-              <input type="email" placeholder="Email">
-            </label>
-            <label class="label-input">
-              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/forgot-password.png">
-              <input type="password" placeholder="Senha">
-            </label>
-          <a href="#"><button class="btn btn-second">Cadastrar</button></a>
-          </form>
-        </div> <!-- Segunda Coluna -->
-      </div> <!-- Primeiro Content -->
-    <div class="content second-content">
-        <div class="first-column">
-          <h2 class="title-bemvindo">Olá amigo</h2>
-          <p class="description description-primary">Insira os seus dados pessoais aqui</p>
-          <p class="description description-primary">algum texto que ainda vou pensar</p>
-          <button id="conta" class="btn btn-primary">Criar conta</button>
-        </div> <!-- Primeira Coluna -->
-        <div class="second-column">
-          <h2 class="title title-second">Entrar</h2>
-          <div class="social-media">
-            <ul class="list-social-midia">
-              <a href="#">
-                <li class="item-social-midia">
-                  <img src="https://img.icons8.com/material/30/000000/facebook-circled.png">
-                </li>
-              </a>
-              <a href="#">
-                <li class="item-social-midia">
-                    <img src="https://img.icons8.com/material-sharp/30/000000/google-plus.png">
-                </li>
-              </a>
-            </ul>
-          </div> <!-- Social Mídeia -->
-          <form class="form">          
-            <label class="label-input" for="">
-              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/email.png">
-              <input type="email" placeholder="Email">
-            </label>
-            
-            <label class="label-input">
-              <img class="modificando-icone" src="https://img.icons8.com/ios-glyphs/24/000000/forgot-password.png">
-              <input type="password" placeholder="Senha">
-            </label>
-          <a class="password" href="#">esqueceu sua senha?</a>
-          <button class="btn btn-second">Entrar</button>
-          </form>
-        </div> <!-- Segunda Coluna --> 
-    </div> <!-- Segundo Content -->
+      </div>
+      </div>
     </div>
-
-  <!-- INTERATIVIDADE DO LOGIN COM O CADASTRO -->
-  <script src="js/login.js"></script>
 </body>
 </html>
+
