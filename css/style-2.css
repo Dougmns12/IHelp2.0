@@ -1,14 +1,19 @@
-.cont{
-	margin-top: 100px;
+.divfazerpergunta{
+		margin-top: 110px;
 }
+.dropdown{
+	margin-top: 50px;
+}
+h1{
+	text-align: center;
+}
+.text{
+	text-align: center;
+}
+.pergunta{
 
-.public{
-	margin-top: 20px;
 }
-
-.center{
-	margin-right: 50px;
-}
-.cor{
-	background-color: blue
+.respergunta{
+	margin-top: 110px;
+	text-align: center;
 }
