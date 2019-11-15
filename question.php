@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <link rel="icon" type="imagem/png" href="images/logo.png" />
 
   <!-- Favicons -->
   <link href="img/icone.png" rel="icon">
@@ -25,6 +26,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  
 
 </head>
 
@@ -59,13 +61,15 @@
           <div class="col-md-6 col-lg-5 offset-lg-1">
             <div class="box1">
                 <h4 class="title"><a href="">Faça sua pergunta</a></h4>
-            <input type="name" placeholder="Digite sua pergunta" class="texto questionbox"/>
-            <a class="button" href="#">Perguntar</a>
+                <form action="POST">
+            <input type="text" name="pergunta" placeholder="Digite sua pergunta" class="texto questionbox"/>
+            <input type="submit" name="perguntar" value="Perguntar" class="button"></a>
             <select class="button2" >
                     <option value="eventos">Eventos</option>
                     <option value="eletromecânica">Eletromecânica</option>
                     <option value="informatica">Informática</option>
             </select>
+            </form>
             </div>
         </div>
       </div>
@@ -91,3 +95,71 @@
 
 </body>
 </html>
+<?php
+
+	$login = "";
+	$email = "";
+	$senha = "";
+
+
+   	if(isset($_POST["login"])){
+    	$login = $_POST['login'];
+   }
+     if(isset($_POST["email"])){
+    	$email = $_POST['email'];
+   }
+   	if(isset($_POST["senha"])){
+    	$senha = $_POST['senha'];
+   }
+
+	if($login != -1){
+		$erro = cadastrarColaborador($login, $email, $senha);
+		if($erro != ""){
+      //echo "<font color='#00FF00' size='+2'> <b>Registro inserido com sucesso!</b> </font>";
+		}
+	}
+	
+
+	function abrirConexao(){
+		$con = mysqli_connect("localhost",
+			"douglas","1234", "bdihelp");
+		// Checando a conexão
+		if (mysqli_connect_errno($con)){
+			//echo "Erro ao conectar com a base de dados: ";
+			mysqli_connect_error();
+		}else{
+			//echo "Conexão Aberta!!";
+		}
+
+		return $con;
+
+	}
+
+	function cadastrarColaborador($login, $email, $senha){
+
+		$con = abrirConexao();
+
+		$sql = "INSERT INTO Colaboradores (login, email, senha) VALUES (" .
+			"'" . $login . "', " .
+			"'" . $email . "', " .
+			"'" . $senha . "');" ;
+
+
+		//echo "<br><br>SQL: " . $sql;
+
+
+		$lastInsertedid = -1;
+	     
+	    if (mysqli_query($con, $sql)) {
+	 	   	//echo "New record created successfully";
+	 	   	$lastInsertedid = mysqli_insert_id($con);
+		} else {
+        //echo "Error: " . $sql . "<br>" . mysqli_error($con);
+		}
+		mysqli_close($con);
+
+		return $lastInsertedid;
+
+	} 
+
+?>

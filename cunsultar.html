@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="php/consultar.php">
+    <link rel="icon" type="imagem/png" href="images/logo.png" />
+
+    <title>Consultar</title>
+</head>
+<body>
+    <h2>Consultar Colaboradores Cadastrados</h2>
+    <form action="consultar.php" method="post" id="formFiltrarPessoas" name="formFiltrarPessoas">
+        <tr>
+            <td colspan="4">
+                <b><a href="login.php"><<< Voltar</a></b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <b>Filtros</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nome:
+            </td>
+            <td>
+                <input type="text" name="nome" value="">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <td>Nascimento entre:</td>
+        <td><input type="text" name="fl_data_inicial" value=""></td>
+        <td align="center"> E </td>
+        <td><input type="text" name="fl_data_final" value=""></td>
+        </tr>
+        <tr>
+        <td colspan="4" align="center"> </td>
+        </tr>
+        <tr>
+        <td colspan="4" align="center"><input type="submit" name="consultar" value="Consultar"></td>
+        </tr>
+        </table>
+        </form>
+
+        <table width="800">
+        <tr>
+        <td colspan="6" align="center"> <h2>Listagem de Pessoas</h2> </td>
+        </tr>
+        <tr>
+        <td><b>codColaborador</b></td>
+        <td><b>Nome</b></td>
+        <td><b>Data de Nascimento</b></td>
+        <td><b>Curso</b></td>
+        <td><b>Instituição</b></td>
+        <td><b>Login</b></td>
+        <td><b>Senha</b></td>
+        <td><b>Email</b></td>
+        <td><b>Apelido</b></td>
+        <td><b>Sexo</b></td>
+        <td><b>Nível do Colaborador</b></td>
+        <td><b>Cidade</b></td>
+        <td><b>Estado</b></td>
+        <td><b>Nível do Colaborador</b></td>
+
+        </tr>
+    </form>
+</body>
+</html>

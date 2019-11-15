@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <title>IHelp</title>
@@ -24,7 +24,7 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -45,10 +45,11 @@
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
           <li><a href="question.html">Perguntar</a></li>
+          <li><a href="atualizar.php">Atualizar Dados</a></li>
+          <li><a href="#">Procurar Perguntas</a></li>
         </ul>
+        
       </nav><!-- .main-nav -->
-      
-    </div>
   </header><!-- #header -->
     <!--==========================
       Services Section
