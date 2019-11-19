@@ -33,7 +33,7 @@
                 <input type="password" name="senha" value="" placeholder="Senha">
               </label>
             <a class="password" href="#">esqueceu sua senha?</a>
-            <input class="btn btn-second" type="submit" name="enviar" value="Entrar" ><a href="#"></a></input>
+            <input class="btn btn-second" type="submit" name="enviar" value="Entrar" >
             </form>
           </div>
       </div>
@@ -60,35 +60,68 @@
 </body>
 </html>
 
-<?php 
+<?php
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$enviar = $_POST['enviar'];
+$senha = "";
+$email = "";
 
-function Conexao(){
-  $con = mysqli_connect("localhost","douglas","1234", "bdihelp");
-  if (mysqli_connect_errno($con)){
-    echo "Erro ao conectar com a base de dados: ";
-    mysqli_connect_error();
-  }else{
-    //echo "Conexão Aberta!!";
-  }
+    if(isset($_POST["senha"])){
+    $senha = $_POST['senha'];
+   }
+   if(isset($_POST["emai"])){
+    $email = $_POST['email'];
+   }
 
-  return $con;
+if($email != "" && $senha != ""){
+$erro = adicionarPessoa($senha, $login);
+if($erro != -1){
+
+  header("Location: cadastro.php");
+}else{
+	echo "<font color='#00FF00' size='+2'> <b>Tente novamente!</b> </font>";  
+}
 
 }
-echo"AQUI";
-  if(isset($enviar)){
-    $verificando = mysql_query("SELECT * FROM Colaboradores WHERE login = '$login' AND senha = '$senha'") or die ("ERRO AO SELECIONAR");
-      if (mysql_num_rows($verificando)<=-1) {
-        echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
-echo"OIOIOIOI";
-          die();
-      }else{
-        setcookie("login", $login);
 
-        header("location:ask.php");
-      }
-  }
+
+function abrirConexao(){
+$con = mysqli_connect("localhost", "douglas","1234", "bdihelp");
+echo"Checando a conexão";
+if (mysqli_connect_errno($con)){
+echo "Erro ao conectar com a base de dados: ";
+mysqli_connect_error();
+}else{
+//echo "Conexão Aberta!!";
+}
+
+return $con;
+
+}
+
+function adicionarPessoa($senha, $email){
+
+  $con = abrirConexao();
+
+$sql = "SELECT * FROM Colaboradores WHERE " .
+"senha = '" . $senha . "' and " .
+"email = '" . $email . "';" ;
+echo "<br><br>SQL: " . $sql;
+
+
+$existeUsuario = -1;
+   
+$result = mysqli_query($con, $sql);
+
+if( mysqli_num_rows($result) > 0){
+   
+   $existeUsuario = mysqli_num_rows($result);
+
+}
+
+mysqli_close($con);
+
+return $existeUsuario;
+
+}
+
 ?>
